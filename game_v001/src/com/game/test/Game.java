@@ -10,40 +10,41 @@ public class Game {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÈı¸ö»¥²»ÏàÍ¬ÇÒ´óĞ¡Îª2-9Ö®¼äµÄ¸öÊı:");
+		System.out.println("è¯·è¾“å…¥ä¸‰ä¸ªäº’ä¸ç›¸åŒä¸”å¤§å°ä¸º2-9ä¹‹é—´çš„ä¸ªæ•°:");
 		Integer num1 = in.nextInt();
 		Integer num2 = in.nextInt();
 		Integer num3 = in.nextInt();
-		// ÅĞ¶ÏÊäÈëµÄÈı¸ö¸öÊıÊÇ·ñ·ûºÏÒªÇó
+		// åˆ¤æ–­è¾“å…¥çš„ä¸‰ä¸ªä¸ªæ•°æ˜¯å¦ç¬¦åˆè¦æ±‚
 		while(num1 <= 1||num1 >= 10 || num2 <= 1 || num2 >= 10 || num3 <= 1
 				|| num3 >= 10 || num1 == num2 || num2 == num3 || num1 == num3) {
-			System.out.println("ÊäÈë²»·ûºÏÒªÇó£¬ÇëÖØĞÂÊäÈë:");
+			System.out.println("è¾“å…¥ä¸ç¬¦åˆè¦æ±‚ï¼Œè¯·é‡æ–°è¾“å…¥:");
 			num1=in.nextInt();
 			num2=in.nextInt();
 			num3=in.nextInt();
 			
 		}
-		System.out.println("ÄãÊäÈëµÄÈı¸öÊıÎª:"+num1+"--"+num2+"--"+num3);
+		System.out.println("ä½ è¾“å…¥çš„ä¸‰ä¸ªæ•°ä¸º:"+num1+"--"+num2+"--"+num3);
 		for (int i = 1; i <=100; i++) {
-			Integer a=i/10;//»ñÈ¡µ½Ã¿¸öÊı¾İµÄÊ®·ÖÎ»
-			Integer b=i-a*10;//»ñÈ¡µ½Ã¿¸öÊıµÄ¸öÎ»Êı
-			if(a==num1||b==num1){//ÏÈÅĞ¶Ï
+			Integer a=i/10;//è·å–åˆ°æ¯ä¸ªæ•°æ®çš„ååˆ†ä½
+			Integer b=i-a*10;//è·å–åˆ°æ¯ä¸ªæ•°çš„ä¸ªä½æ•°
+			//é‡‡ç”¨é€†å‘æ€ç»´ï¼Œå…ˆè§£å†³ä¼˜å…ˆçº§æœ€é«˜çš„é—®é¢˜ï¼Œå†ä¾æ¬¡å¤„ç†ä½ä¼˜å…ˆçº§çš„é—®é¢˜ï¼ŒåŒçº§ä¹‹é—´çš„ä¼˜å…ˆçº§æŒ‰è‡ªç„¶é¡ºåº
+			if(a==num1||b==num1){//å…ˆåˆ¤æ–­æ˜¯å¦åŒ…å«ç¬¬ä¸€ä¸ªç‰¹æ®Šæ•°å­—
 				System.out.println("Fizz");
-			}else if(i%num1==0 && i%num2==0 && i%num3==0){
+			}else if(i%num1==0 && i%num2==0 && i%num3==0){//åˆ¤æ–­å½“å‰æ•°å­—èƒ½å¤ŸåŒæ—¶æ»¡è¶³è¿™ä¸‰ä¸ªæ¡ä»¶
 				System.out.println("FizzBuzzWhizz");
-			}else if(i%num1==0 && i%num2==0){
+			}else if(i%num1==0 && i%num2==0){//æ»¡è¶³ç¬¬äºŒä¼˜å…ˆçº§
 				System.out.println("FizzBuzz");
 			}else if(i%num2==0 && i%num3==0){
 				System.out.println("BuzzWhizz");
 			}else if(i%num1==0 && i%num3==0){
 				System.out.println("FizzWhizz");
-			}else if(i%num1==0){
+			}else if(i%num1==0){//ç¬¬ä¸‰ä¼˜å…ˆçº§
 				System.out.println("Fizz");
 			}else if(i%num2==0){
 				System.out.println("Buzz");
 			}else if(i%num3==0){
 				System.out.println("Whizz");
-			}else{
+			}else{//æœ€ä½ä¼˜å…ˆçº§ï¼Œå³é¢˜ç›®çš„æ€»ä½“è¦æ±‚
 				System.out.println(i);
 			}
 		}
