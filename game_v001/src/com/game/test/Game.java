@@ -3,8 +3,8 @@ package com.game.test;
 import java.util.Scanner;
 /*
  * @author ChenChiJun
- * 
- * 
+ * @version 初始版本
+ * 上午11:39:10
  */
 public class Game {
 	
